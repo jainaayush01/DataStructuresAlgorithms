@@ -1,11 +1,5 @@
-// { Driver Code Starts
-//Initial template for C++
-
 #include<bits/stdc++.h> 
 using namespace std; 
-
- // } Driver Code Ends
-//User function template for C++
 
 class Solution{   
 public:
@@ -19,10 +13,12 @@ public:
         
         // iniitalization: 
         for(int j = 1; j <= sum; ++j) {
-            dp[0][j] = 0; // sum=1...sum not possible from first 0 elements
+            dp[0][j] = 0; 
+            // sum=1...sum not possible from first 0 elements
         }
         for(int i = 0; i <= N; ++i) {
-            dp[i][0] = 1; // sum=0 possible for first i=0...N by using empty subset
+            dp[i][0] = 1; 
+            // sum=0 possible for first i=0...N by using empty subset
         }
         
         for(int i = 1; i <= N; ++i) {
@@ -34,17 +30,12 @@ public:
                     // dp[i-1][j] tells if the subset was formed without arr[i-1] or not
                     // so basially dp[N][sum] tells us by going through all the subsets
                 }
-                else { // if greater than the curr ans = previous ans
+                else { 
+                    // if greater than the curr ans = previous ans
                     dp[i][j] = dp[i-1][j];
                 }
             }
         }
-        // for(int i = 0; i <= N; ++i) {
-        //     for(int j = 0; j <= sum; ++j) {
-        //         cout<<dp[i][j]<<" ";
-        //     }
-        //     cout<<endl;
-        // }
         
         return dp[N][sum];
     }
