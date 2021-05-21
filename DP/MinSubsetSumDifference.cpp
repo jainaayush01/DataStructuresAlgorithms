@@ -5,7 +5,7 @@ class Solution{
     // similarity: to equal sum partition problem
     // here we have to find minimum differenece between s1 and s2 
     // there we had to find out s1-s2=0
-    // last row of matrix contains what subsetSums are possible with arr of size N
+    // last row of dp matrix contains what subsetSums are possible with arr of size N
     // so we can take the max sum possible and find diff: totalSum - 2 * subsetSum
 
 	public:

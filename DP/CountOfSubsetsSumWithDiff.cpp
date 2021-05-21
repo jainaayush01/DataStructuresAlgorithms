@@ -39,4 +39,19 @@ public:
         
         return dp[N][sum];
     }
+
+    int countSubsetSumDiff(int N, int arr[], int diff) {
+        // s1 and s2 = sum of 2 subsets of arr
+        // s1-s2 = diff
+        // s1+s2 = totalSum
+        // s1 = (diff+totalSum)/2
+        // countSubsetSum(s1);
+
+        int totalSum = 0;
+        for(int i = 0; i < N; ++i) {
+            totalSum += arr[i];
+        }
+        int sum1 = (diff + totalSum) / 2;
+        return countSubsetSum(N, arr, sum1);
+    }
 };

@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution{   
 public:
-    bool isSubsetSum(int N, int arr[], int sum){
+    bool countSubsetSum(int N, int arr[], int sum){
         // Dynamic Programming
         // 01 knapsack problem
         // choice: select the number or do not select the number
