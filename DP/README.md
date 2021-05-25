@@ -57,7 +57,7 @@ optimal: choose weights with maximum value with total weight less than given wei
             dp[0][i] = 0;
         }
         for(int i = 0; i <= N; ++i) {
-            for(int i = 0; i <= sum; ++i) {
+            for(int j = 0; j <= sum; ++j) {
                 if(wt[i-1] <= j) {
                     dp[i][j] = max(val[i-1] + dp[i-1][j-wt[i-1]], dp[i-1][j]);
                 }
@@ -116,7 +116,7 @@ optimal: choose weights with maximum value with total weight less than given wei
             dp[0][i] = 0;
         }
         for(int i = 0; i <= N; ++i) {
-            for(int i = 0; i <= sum; ++i) {
+            for(int j = 0; j <= sum; ++j) {
                 if(wt[i-1] <= j) {
                     dp[i][j] = max(val[i-1] + dp[i][j-wt[i-1]], dp[i-1][j]); // only change than 01 knapsack
                 }
