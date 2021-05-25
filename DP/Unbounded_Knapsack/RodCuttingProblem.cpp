@@ -1,8 +1,12 @@
 // https://practice.geeksforgeeks.org/problems/rod-cutting0840/1#
-
+// Similar to unbounded knapsack
+// wt -> length
+// val -> price
+// sum -> N
 class Solution{
   public:
     int cutRod(int price[], int N) {
+        // here length array goes from 1 to N 
         int dp[N+1][N+1];
         for(int i = 0; i <= N; ++i) {
             dp[i][0] = 0;
