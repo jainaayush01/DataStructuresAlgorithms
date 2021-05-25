@@ -1,6 +1,3 @@
-#include<bits/stdc++.h> 
-using namespace std; 
-
 class Solution{   
 public:
     int countSubsetSum(int N, int arr[], int sum){
