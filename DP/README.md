@@ -130,4 +130,7 @@ optimal: choose weights with maximum value with total weight less than given wei
     }
 ```
 
-#### Unbounded knapsack Practice problems with similarity
+#### Practice problems with similar to Unbounded knapsack
+1. [Rod Cutting Problems](https://practice.geeksforgeeks.org/problems/rod-cutting0840/1#)
+2. Coin Change Problem: Max ways
+3. Coin Change Problem: Min coins
