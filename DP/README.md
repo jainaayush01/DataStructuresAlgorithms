@@ -48,7 +48,7 @@ optimal: choose weights with maximum value with total weight less than given wei
 
 ```
     int knapsack01(int N, vector<int> wt, vector<int> val, int sum) {
-        int dp[N+1][sum];
+        int dp[N+1][sum+1];
         // initialization
         for(int i = 0; i <= N; ++i) {
             dp[i][0] = 0;
@@ -107,7 +107,7 @@ optimal: choose weights with maximum value with total weight less than given wei
 
 ```
     int knapsack01(int N, vector<int> wt, vector<int> val, int sum) {
-        int dp[N+1][sum];
+        int dp[N+1][sum+1];
         // initialization
         for(int i = 0; i <= N; ++i) {
             dp[i][0] = 0;
