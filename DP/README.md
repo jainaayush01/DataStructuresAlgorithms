@@ -106,7 +106,7 @@ optimal: choose weights with maximum value with total weight less than given wei
 ##### Code:
 
 ```
-    int knapsack01(int N, vector<int> wt, vector<int> val, int sum) {
+    int unboundedKnapsack(int N, vector<int> wt, vector<int> val, int sum) {
         int dp[N+1][sum+1];
         // initialization
         for(int i = 0; i <= N; ++i) {
@@ -132,5 +132,5 @@ optimal: choose weights with maximum value with total weight less than given wei
 
 #### Practice problems with similar to Unbounded knapsack
 1. [Rod Cutting Problems](https://practice.geeksforgeeks.org/problems/rod-cutting0840/1#)
-2. Coin Change Problem: Max ways
-3. Coin Change Problem: Min coins
+2. [Coin Change Problem: Max ways](https://www.geeksforgeeks.org/coin-change-dp-7/)
+3. [Coin Change Problem: Min coins](https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/)
