@@ -14,7 +14,7 @@
 1. 01 knapsack(6)
 2. Unbounded knapsack(5)
 3. Fibonacci(7)
-4. LCS(15)
+4. Longest Common Subsequence - LCS(15)
 5. LIS(10)
 6. Kadane's Algorithm(6)
 7. Matrix chain multiplication(7)
@@ -24,7 +24,7 @@
 
 
 # 1. 01 knapsack
-[Link](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/);
+[Link](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/)
 ##### Input:
 
 ```
@@ -79,7 +79,7 @@ optimal: choose weights with maximum value with total weight less than given wei
 5. [count the number of subsets with a given difference]()
 6. [target sum problem](https://leetcode.com/problems/target-sum/)
 
-NOTE: Solutions are for your reference and available in the DP Folder
+NOTE: Solutions are for your reference and are available in the DP subsequent folder
 
 # 2. Unbounded knapsack
 
@@ -134,3 +134,47 @@ optimal: choose weights with maximum value with total weight less than given wei
 1. [Rod Cutting Problems](https://practice.geeksforgeeks.org/problems/rod-cutting0840/1#)
 2. [Coin Change Problem: Max ways](https://www.geeksforgeeks.org/coin-change-dp-7/)
 3. [Coin Change Problem: Min coins](https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/)
+
+NOTE: Solutions are for your reference and are available in the subsequent Folder
+
+
+# 3. Longest Common Subsequence
+
+##### Problem:
+[Link](https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/)
+
+```
+Find the longest common subsequence which is common in the given two strings x and y
+```
+
+##### Input:
+
+```
+x: string x of chars
+
+y: string y of chars
+
+```
+
+Example I/P and O/P:
+```
+I/P:
+    x: abcdgh
+    y: abedfhr
+O/P: 
+    string: abdh 
+    length: (4)
+
+```
+
+##### Code:
+
+```
+```
+
+#### Practice problems with similar to Longest Common Subsequence
+1.
+
+NOTE: Solutions are for your reference and are available in the subsequent Folder
+
+
