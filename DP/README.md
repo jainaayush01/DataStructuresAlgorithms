@@ -10,6 +10,12 @@
 > 3. Top down approach
 > 4. Bottom up approach
 
+### 3 things to form a recursive approach
+1. Base Condition -> think of the smallest valid input
+2. Choice Diagram -> what choices can you make when you take any element.
+3. How to make the next input smaller
+
+
 ## types of dp problems
 1. 01 knapsack(6)
 2. Unbounded knapsack(5)
@@ -43,6 +49,32 @@ capacity/sum: maximum sum of weights knapsack can hold
 choose the weight once or leave it
 optimal: choose weights with maximum value with total weight less than given weight/sum
 ```
+
+##### Recursive Approach:
+* Base Condition
+    * Smallest valid input: when there is no element in the array or the total capacity of knapsack is 0.
+* Choice Diagram:
+    * If the weight of element is less than remaining capacity of knapsack?
+        * Yes then i have 2 choices to include it or not.
+        * No then i can't include it.
+* Next Smaller Input: 
+    * Once the choice on element is made we don't need it so we can reduce size of N
+
+<!-- ##### Recursive Code:
+
+```
+    int knapsack(int wt[], int val[], int N, int cap) {
+        if(N == 0) {
+            return 1;
+        }
+        if(cap <= 0) {
+            return 0;
+        }
+        if(wt[N-1] <= cap) { 
+            return knapsack(wt, val, )
+        }
+    }
+``` -->
 
 ##### Code:
 
@@ -103,6 +135,16 @@ you can choose the weight multiple times or leave it
 optimal: choose weights with maximum value with total weight less than given weight/sum
 ```
 
+##### Recursive Approach:
+* Base Condition
+    * Smallest valid input: when there is no element in the array or the total capacity of knapsack is 0.
+* Choice Diagram:
+    * If the weight of element is less than remaining capacity of knapsack?
+        * Yes then i have 2 choices to include it(and then check for same element again) or not.
+        * No then i can't include it.
+* Next Smaller Input: 
+    * Once the choice on element is made we don't need it so we can reduce size of N
+
 ##### Code:
 
 ```
@@ -141,7 +183,7 @@ NOTE: Solutions are for your reference and are available in the subsequent Folde
 # 3. Longest Common Subsequence
 
 ##### Problem:
-[Link](https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/)
+[Link](https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/)
 
 ```
 Find the longest common subsequence which is common in the given two strings x and y
@@ -167,9 +209,83 @@ O/P:
 
 ```
 
-##### Code:
+##### Recursive Approach:
+* Base Condition
+    * Smallest valid input: When size of any 1 string is 0 then the lcs length will be zero.
+* Choice Diagram:
+    * If the last element of both string matches then we remove last element of both and add 1 to return length
+    * else we have 2 choices and we take max of both the lengths
+        1. m -> m-1 n -> n
+        2. m -> m, n -> n-1
+* Next Smaller Input: 
+    * Once the choice on element is made we will make a choice so that we don't need to visit it again.
+
+##### Recusrsive Code:
 
 ```
+    int leastCommonSubsequence(string x, string y, int m, int n) {
+        // Base Condition
+        if(m == 0 !! n == 0) {
+            return 0;
+        }
+        // Choices
+        if(x[m-1] == y[n-1]) {
+            return 1 + leastCommonSubsequence(x, y, m-1, n-1);
+        }
+        else {
+            return max(leastCommonSubsequence(x, y, m-1, n), leastCommonSubsequence(x, y, m, n-1));
+        }
+    }
+    Memoized: 
+    
+```
+
+##### Recursion + Memoization:
+```
+    int static dp[1001][1001];
+    memset(dp, -1, sizeof(dp)); <- in main 
+    int leastCommonSubsequence(string x, string y, int m, int n) {
+        // Base Condition
+        if(m == 0 !! n == 0) {
+            return 0;
+        }
+        // Choices
+        if(dp[m][n] != -1) {
+            return dp[m][n];
+        }
+
+        if(x[m-1] == y[n-1]) {
+            return dp[m][n] = 1 + leastCommonSubsequence(x, y, m-1, n-1);
+        }
+        else {
+            return dp[m][n] = max(leastCommonSubsequence(x, y, m-1, n), leastCommonSubsequence(x, y, m, n-1));
+        }
+    }
+```
+
+##### Top down Code:
+```
+    int leastCommonSubsequence(string x, string y, int m, int n) {
+        int dp[m+1][n+1];
+        for(int i = 0; i < m; ++i) {
+            dp[i][0] = 0;
+        }
+        for(int i = 0; i < m; ++i) {
+            dp[0][i] = 0;
+        }
+
+        for(int i = 1; i < m; ++i) {
+            for(int j = 1; j < n; ++j) {
+                if(x[i-1] == y[j-1]) {
+                    dp[i][j] = 1 + dp[i-1][j-1];
+                }
+                else {
+                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
+                }
+            }
+        }
+        return dp[m][n];
+    }
 ```
 
 #### Practice problems with similar to Longest Common Subsequence
