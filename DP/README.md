@@ -288,6 +288,25 @@ O/P:
                 }
             }
         }
+        // to print lcs string
+        string ans = "";
+        int i = m, j = n;
+        while( i > 0 && j > 0 ) {
+            if(x[i-1] == t[j-1]) {
+                ans += x[i - 1];
+                i--;
+                j--;
+            }
+            else {
+                if(dp[i-1][j] > dp[i][j-1]) {
+                    i = i - 1;
+                }
+                else {
+                    j = j - 1;
+                }
+            }
+        }
+        reverse(ans.begin(), ans.end());
         return dp[m][n];
     }
 ```
@@ -297,6 +316,8 @@ O/P:
 
 #### Practice problems with similar to Longest Common Subsequence
 1. [Longest Common Substring](https://www.geeksforgeeks.org/longest-common-substring-dp-29/)
+2. [Print Longest Common Subsequence](https://www.geeksforgeeks.org/printing-longest-common-subsequence/)
+3. [Shortest Common SuperSequence](https://www.geeksforgeeks.org/shortest-common-supersequence/)
 
 NOTE: Solutions are for your reference and are available in the subsequent Folder
 
