@@ -103,6 +103,10 @@ optimal: choose weights with maximum value with total weight less than given wei
     }
 ```
 
+#### How to identify Knapsack Problems:
+* You have to choose for each element if you want to perform an operation on it or not.
+* You have a capacity / maximum value 
+
 #### Practice problems similar to 01 knapsack.
 1. [Subset sum](https://www.geeksforgeeks.org/subset-sum-problem-dp-25/)
 2. [Equal Subset sum partition problem](https://www.geeksforgeeks.org/partition-problem-dp-18/)
@@ -267,20 +271,20 @@ O/P:
 ```
     int leastCommonSubsequence(string x, string y, int m, int n) {
         int dp[m+1][n+1];
-        for(int i = 0; i < m; ++i) {
+        for(int i = 0; i <= m; ++i) {
             dp[i][0] = 0;
         }
-        for(int i = 0; i < m; ++i) {
+        for(int i = 0; i <= n; ++i) {
             dp[0][i] = 0;
         }
 
-        for(int i = 1; i < m; ++i) {
-            for(int j = 1; j < n; ++j) {
+        for(int i = 1; i <= m; ++i) {
+            for(int j = 1; j <= n; ++j) {
                 if(x[i-1] == y[j-1]) {
                     dp[i][j] = 1 + dp[i-1][j-1];
                 }
                 else {
-                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
+                    dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
                 }
             }
         }
@@ -288,8 +292,11 @@ O/P:
     }
 ```
 
+#### Identification of LCS problems
+* We have to find longest common something
+
 #### Practice problems with similar to Longest Common Subsequence
-1.
+1. [Longest Common Substring](https://www.geeksforgeeks.org/longest-common-substring-dp-29/)
 
 NOTE: Solutions are for your reference and are available in the subsequent Folder
 
