@@ -227,17 +227,17 @@ O/P:
 ##### Recusrsive Code:
 
 ```
-    int leastCommonSubsequence(string x, string y, int m, int n) {
+    int longestCommonSubsequence(string x, string y, int m, int n) {
         // Base Condition
         if(m == 0 !! n == 0) {
             return 0;
         }
         // Choices
         if(x[m-1] == y[n-1]) {
-            return 1 + leastCommonSubsequence(x, y, m-1, n-1);
+            return 1 + longestCommonSubsequence(x, y, m-1, n-1);
         }
         else {
-            return max(leastCommonSubsequence(x, y, m-1, n), leastCommonSubsequence(x, y, m, n-1));
+            return max(longestCommonSubsequence(x, y, m-1, n), longestCommonSubsequence(x, y, m, n-1));
         }
     }
     Memoized: 
@@ -248,7 +248,7 @@ O/P:
 ```
     int static dp[1001][1001];
     memset(dp, -1, sizeof(dp)); <- in main 
-    int leastCommonSubsequence(string x, string y, int m, int n) {
+    int longestCommonSubsequence(string x, string y, int m, int n) {
         // Base Condition
         if(m == 0 !! n == 0) {
             return 0;
@@ -259,17 +259,17 @@ O/P:
         }
 
         if(x[m-1] == y[n-1]) {
-            return dp[m][n] = 1 + leastCommonSubsequence(x, y, m-1, n-1);
+            return dp[m][n] = 1 + longestCommonSubsequence(x, y, m-1, n-1);
         }
         else {
-            return dp[m][n] = max(leastCommonSubsequence(x, y, m-1, n), leastCommonSubsequence(x, y, m, n-1));
+            return dp[m][n] = max(longestCommonSubsequence(x, y, m-1, n), longestCommonSubsequence(x, y, m, n-1));
         }
     }
 ```
 
 ##### Top down Code:
 ```
-    int leastCommonSubsequence(string x, string y, int m, int n) {
+    int longestCommonSubsequence(string x, string y, int m, int n) {
         int dp[m+1][n+1];
         for(int i = 0; i <= m; ++i) {
             dp[i][0] = 0;
@@ -312,12 +312,18 @@ O/P:
 ```
 
 #### Identification of LCS problems
-* We have to find longest common something
+* dynamic programming (Choice Optimal)
+* 2 Strings are given
+* We have to find longest common something OR optimal
 
 #### Practice problems with similar to Longest Common Subsequence
 1. [Longest Common Substring](https://www.geeksforgeeks.org/longest-common-substring-dp-29/)
 2. [Print Longest Common Subsequence](https://www.geeksforgeeks.org/printing-longest-common-subsequence/)
 3. [Shortest Common SuperSequence](https://www.geeksforgeeks.org/shortest-common-supersequence/)
+4. [Minimum Number of Insertion / Deletions to transform X to Y](https://www.geeksforgeeks.org/minimum-number-deletions-insertions-transform-one-string-another/)
+5. [Largest Palindromic Subsequence](https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/) [LeetCode](https://leetcode.com/problems/longest-palindromic-subsequence/)
+6. [Minimum Deletions to Make a String Palindromic](https://www.geeksforgeeks.org/minimum-number-deletions-make-string-palindrome/)
+7. [Print Shortest Common SuperSequence](https://www.geeksforgeeks.org/print-shortest-common-supersequence/) [leetcode](https://leetcode.com/problems/shortest-common-supersequence/)
 
 NOTE: Solutions are for your reference and are available in the subsequent Folder
 
