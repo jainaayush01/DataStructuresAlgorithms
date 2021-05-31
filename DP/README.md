@@ -336,5 +336,9 @@ O/P:
 8. [Largest Repeating Subsequence](https://www.geeksforgeeks.org/longest-repeated-subsequence/)
 9. [Is Subsequence](https://www.geeksforgeeks.org/given-two-strings-find-first-string-subsequence-second/) | [LeetCode](https://leetcode.com/problems/is-subsequence/)
 10. [Minimum Number of Insertions to make a String Palindromic](https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/)
+11. [Length of largest subsequence of A which is substring in B](https://www.geeksforgeeks.org/find-length-longest-subsequence-one-string-substring-another-string/)
+12. [Count how many times A appears as subsequence in B](https://www.geeksforgeeks.org/find-number-times-string-occurs-given-string/)
+13. [Longest palindromic substring](https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/) | [LeetCode](https://leetcode.com/problems/longest-palindromic-substring/)
+14. [Count of palindromic substring](https://www.geeksforgeeks.org/count-palindrome-sub-strings-string/) | [LeetCode](https://leetcode.com/problems/palindromic-substrings/)
 
 NOTE: Solutions are for your reference and are available in the subsequent Folder
