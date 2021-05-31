@@ -323,8 +323,9 @@ O/P:
 4. [Minimum Number of Insertion / Deletions to transform X to Y](https://www.geeksforgeeks.org/minimum-number-deletions-insertions-transform-one-string-another/)
 5. [Largest Palindromic Subsequence](https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/) [LeetCode](https://leetcode.com/problems/longest-palindromic-subsequence/)
 6. [Minimum Deletions to Make a String Palindromic](https://www.geeksforgeeks.org/minimum-number-deletions-make-string-palindrome/)
-7. [Print Shortest Common SuperSequence](https://www.geeksforgeeks.org/print-shortest-common-supersequence/) [leetcode](https://leetcode.com/problems/shortest-common-supersequence/)
+7. [Print Shortest Common SuperSequence](https://www.geeksforgeeks.org/print-shortest-common-supersequence/) [LeetCode](https://leetcode.com/problems/shortest-common-supersequence/)
+8. [Largest Repeating Subsequence](https://www.geeksforgeeks.org/longest-repeated-subsequence/)
+9. [Is Subsequence](https://www.geeksforgeeks.org/given-two-strings-find-first-string-subsequence-second/) [LeetCode](https://leetcode.com/problems/is-subsequence/)
+10. [Minimum Number of Insertions to make a String Palindromic](https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/)
 
 NOTE: Solutions are for your reference and are available in the subsequent Folder
-
-
