@@ -15,6 +15,10 @@
 2. Choice Diagram -> what choices can you make when you take any element.
 3. How to make the next input smaller
 
+#### If any 2 of below properties match any other type of dp question than it can be solved using that technique (mostly in lcs)
+1. I/P is similar 
+2. What question is asking (minimum, maximum, etc);
+3. O/P is similar
 
 ## types of dp problems
 1. 01 knapsack(6)
@@ -316,16 +320,21 @@ O/P:
 * 2 Strings are given
 * We have to find longest common something OR optimal
 
+#### Can be solved using lcs?
+1. I/P: 2 Strings (also sometimes if 1 can be used to make another hidden string)
+2. Question: Longest
+3. O/P: length (int)
+
 #### Practice problems with similar to Longest Common Subsequence
 1. [Longest Common Substring](https://www.geeksforgeeks.org/longest-common-substring-dp-29/)
 2. [Print Longest Common Subsequence](https://www.geeksforgeeks.org/printing-longest-common-subsequence/)
 3. [Shortest Common SuperSequence](https://www.geeksforgeeks.org/shortest-common-supersequence/)
 4. [Minimum Number of Insertion / Deletions to transform X to Y](https://www.geeksforgeeks.org/minimum-number-deletions-insertions-transform-one-string-another/)
-5. [Largest Palindromic Subsequence](https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/) [LeetCode](https://leetcode.com/problems/longest-palindromic-subsequence/)
+5. [Largest Palindromic Subsequence](https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/) | [LeetCode](https://leetcode.com/problems/longest-palindromic-subsequence/)
 6. [Minimum Deletions to Make a String Palindromic](https://www.geeksforgeeks.org/minimum-number-deletions-make-string-palindrome/)
-7. [Print Shortest Common SuperSequence](https://www.geeksforgeeks.org/print-shortest-common-supersequence/) [LeetCode](https://leetcode.com/problems/shortest-common-supersequence/)
+7. [Print Shortest Common SuperSequence](https://www.geeksforgeeks.org/print-shortest-common-supersequence/) | [LeetCode](https://leetcode.com/problems/shortest-common-supersequence/)
 8. [Largest Repeating Subsequence](https://www.geeksforgeeks.org/longest-repeated-subsequence/)
-9. [Is Subsequence](https://www.geeksforgeeks.org/given-two-strings-find-first-string-subsequence-second/) [LeetCode](https://leetcode.com/problems/is-subsequence/)
+9. [Is Subsequence](https://www.geeksforgeeks.org/given-two-strings-find-first-string-subsequence-second/) | [LeetCode](https://leetcode.com/problems/is-subsequence/)
 10. [Minimum Number of Insertions to make a String Palindromic](https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/)
 
 NOTE: Solutions are for your reference and are available in the subsequent Folder
