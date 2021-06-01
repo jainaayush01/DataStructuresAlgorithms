@@ -349,30 +349,44 @@ NOTE: Solutions are for your reference and are available in the subsequent Folde
 ##### Problem:
 [Link](https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/)
 
-```
-```
-
-##### Input:
-
-```
-
-```
 
 Example I/P and O/P:
 ```
-I/P:
+I/P: Array or String
+    arr[]: [10, 20, 30, 40]
+    Matrix dimensions are:
+    AI = arr[i-1] * arr[i];
+    bcuz [to multiply matrix n1 == m2]
 
-O/P:
-    
+O/P: Find Minimum Cost of multiplying the matrix with given dimensions
+where cost of multipying matrix with dimenion m1,n1 and m2,n2 is given by arr[m1] * arr[n1] * arr[n2];
 
 ```
 
 ##### Recursive Approach:
+1. Find i, j
+2. Find Base Condition
+    * Think of first invalid Input: (i > j) return 0
+3. We have to take i and j 
+4. Loop k from i to j then call function on i = i and j = k and 2nd call on i = k+1 j = j
+5. and then we calcuate ans from tempAns of the each loop
 
-##### Recusrsive Code:
 
+#### Recursive Code:
 ```
-    
+    int solve(int arr[], int i, int j) {
+        if(i >= j) {
+            return 0;
+        }
+        int ans = INT_MAX;
+        for(int k = i; k <= j-1; ++k) { 
+            int temp1 = solve(arr, i, k);
+            int temp2 = solve(arr, k+1, j);
+            int tempAns = temp1 + temp2 + arr[i-1] * arr[k] * arr[j];
+            ans = min(tempAns, ans);
+        }
+        return ans;
+    }
 ```
 
 ##### Recursion + Memoization:
@@ -380,8 +394,37 @@ O/P:
     
 ```
 
+##### Things to keep in mind while approaching MCM:
+1. Find i, j
+2. Find Base Condition
+    * Think of first invalid Input: (i > j) return 0
+3. Find K loop scheme
+4. calculate ans from tempAns
+
+##### Basic Format:
+
+```
+    int solve(int arr[], int i, int j) {
+        if(i > j) {
+            return 0; // base condition can be changed
+        }
+        int ans = 0;
+        for(int k = i; k < j; ++k) { // ++ can change, i can be i+1, j can be j-1
+            // calcuate temp1 and temp2;
+            int temp1 = solve(arr, i, k);
+            int temp2 = solve(arr, k+1, j);
+            ans += SomeOperationOn(temp1, temp2); // opr can be changed
+        }
+        return ans;
+    }
+```
+
 #### Identification of MCM problems
 * dynamic programming (Choice Optimal)
+* String or Array is given
+* We have to take i and j 
+* Loop k from i to j then call function on i = i and j = k and 2nd call on i = k+1 j = j
+* and then we calcuate ans from tempAns of the each loop
 
 #### Can be solved using MCM?
 
