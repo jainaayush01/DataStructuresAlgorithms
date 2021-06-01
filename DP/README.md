@@ -342,3 +342,56 @@ O/P:
 14. [Count of palindromic substring](https://www.geeksforgeeks.org/count-palindrome-sub-strings-string/) | [LeetCode](https://leetcode.com/problems/palindromic-substrings/)
 
 NOTE: Solutions are for your reference and are available in the subsequent Folder
+
+
+# 4. Matrix Chain Multiplication
+
+##### Problem:
+[Link](https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/)
+
+```
+```
+
+##### Input:
+
+```
+
+```
+
+Example I/P and O/P:
+```
+I/P:
+
+O/P:
+    
+
+```
+
+##### Recursive Approach:
+
+##### Recusrsive Code:
+
+```
+    
+```
+
+##### Recursion + Memoization:
+```
+    
+```
+
+#### Identification of MCM problems
+* dynamic programming (Choice Optimal)
+
+#### Can be solved using MCM?
+
+#### Practice problems with similar to Longest Common Subsequence
+1. [MCM]
+2. [Print MCM]
+3. [SEvaluate Expression to True]
+4. [Minimum / Maximum value of an Expression]
+5. [Palindromic partitioning]
+6. [Scramble String]
+7. [Egg Droping Problem]
+
+NOTE: Solutions are for your reference and are available in the subsequent Folder
