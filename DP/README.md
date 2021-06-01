@@ -389,9 +389,31 @@ where cost of multipying matrix with dimenion m1,n1 and m2,n2 is given by arr[m1
     }
 ```
 
-##### Recursion + Memoization:
+##### Recursion + Memoization (Bottom Up):
 ```
-    
+class Solution{
+public:
+    int dp[101][101]; // var changed i and j and are size of arr
+    int solve(int arr[], int i, int j) {
+        if(i >= j) {
+            return 0;
+        }
+        if(dp[i][j] != -1) {
+            return dp[i][j];
+        }
+        int ans = INT_MAX;
+        for(int k = i; k < j; ++k) { 
+            int tempAns = solve(arr, i, k); + solve(arr, k+1, j); + (arr[i-1] * arr[k] * arr[j]);
+            ans = min(tempAns, ans);
+        }
+        return dp[i][j] = ans;
+    }
+    int matrixMultiplication(int N, int arr[])
+    {
+        memset(dp, -1, sizeof(dp));
+        return solve(arr, 1, N-1);
+    }
+};
 ```
 
 ##### Things to keep in mind while approaching MCM:
