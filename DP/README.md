@@ -403,7 +403,7 @@ public:
         }
         int ans = INT_MAX;
         for(int k = i; k < j; ++k) { 
-            int tempAns = solve(arr, i, k); + solve(arr, k+1, j); + (arr[i-1] * arr[k] * arr[j]);
+            int tempAns = solve(arr, i, k) + solve(arr, k+1, j) + (arr[i-1] * arr[k] * arr[j]);
             ans = min(tempAns, ans);
         }
         return dp[i][j] = ans;
