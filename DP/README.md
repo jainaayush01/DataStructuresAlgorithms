@@ -1,21 +1,21 @@
 # Dynamic Programming Notes
 
-### Where dp can be used?
+## Where dp can be used?
 > 1. Choice is given
 > 2. Find optimal solution
 
-### How to solve dp problems
+## How to solve dp problems
 > 1. Recursion
 > 2. Recursion + Memoization
 > 3. Top down approach
 > 4. Bottom up approach
 
-### 3 things to form a recursive approach
+## 3 things to form a recursive approach
 1. Base Condition -> think of the smallest valid input
 2. Choice Diagram -> what choices can you make when you take any element.
 3. How to make the next input smaller
 
-#### If any 2 of below properties match any other type of dp question than it can be solved using that technique (mostly in lcs)
+## If any 2 of below properties match any other type of dp question than it can be solved using that technique (mostly in lcs)
 1. I/P is similar 
 2. What question is asking (minimum, maximum, etc);
 3. O/P is similar
@@ -35,7 +35,7 @@
 
 # 1. 01 knapsack
 [Link](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/)
-##### Input:
+### Input:
 
 ```
 wt[]: array of weights available
@@ -47,14 +47,14 @@ N: number of weights
 capacity/sum: maximum sum of weights knapsack can hold
 ```
 
-##### Problem:
+### Problem:
 
 ```
 choose the weight once or leave it
 optimal: choose weights with maximum value with total weight less than given weight/sum
 ```
 
-##### Recursive Approach:
+### Recursive Approach:
 * Base Condition
     * Smallest valid input: when there is no element in the array or the total capacity of knapsack is 0.
 * Choice Diagram:
@@ -64,7 +64,7 @@ optimal: choose weights with maximum value with total weight less than given wei
 * Next Smaller Input: 
     * Once the choice on element is made we don't need it so we can reduce size of N
 
-<!-- ##### Recursive Code:
+<!-- ### Recursive Code:
 
 ```
     int knapsack(int wt[], int val[], int N, int cap) {
@@ -80,7 +80,7 @@ optimal: choose weights with maximum value with total weight less than given wei
     }
 ``` -->
 
-##### Code:
+### Code:
 
 ```
     int knapsack01(int N, vector<int> wt, vector<int> val, int sum) {
@@ -107,11 +107,11 @@ optimal: choose weights with maximum value with total weight less than given wei
     }
 ```
 
-#### How to identify Knapsack Problems:
+### How to identify Knapsack Problems:
 * You have to choose for each element if you want to perform an operation on it or not.
 * You have a capacity / maximum value 
 
-#### Practice problems similar to 01 knapsack.
+### Practice problems similar to 01 knapsack.
 1. [Subset sum](https://www.geeksforgeeks.org/subset-sum-problem-dp-25/)
 2. [Equal Subset sum partition problem](https://www.geeksforgeeks.org/partition-problem-dp-18/)
 3. [Count of subset sum with a given sum](https://www.geeksforgeeks.org/count-of-subsets-with-sum-equal-to-x/)
@@ -123,7 +123,7 @@ NOTE: Solutions are for your reference and are available in the DP subsequent fo
 
 # 2. Unbounded knapsack
 
-##### Input:
+### Input:
 
 ```
 wt[]: array of weights available
@@ -135,7 +135,7 @@ N: number of weights
 capacity/sum: maximum sum of weights knapsack can hold
 ```
 
-##### Problem:
+### Problem:
 [Link](https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/)
 
 ```
@@ -143,7 +143,7 @@ you can choose the weight multiple times or leave it
 optimal: choose weights with maximum value with total weight less than given weight/sum
 ```
 
-##### Recursive Approach:
+### Recursive Approach:
 * Base Condition
     * Smallest valid input: when there is no element in the array or the total capacity of knapsack is 0.
 * Choice Diagram:
@@ -153,7 +153,7 @@ optimal: choose weights with maximum value with total weight less than given wei
 * Next Smaller Input: 
     * Once the choice on element is made we don't need it so we can reduce size of N
 
-##### Code:
+### Code:
 
 ```
     int unboundedKnapsack(int N, vector<int> wt, vector<int> val, int sum) {
@@ -180,7 +180,7 @@ optimal: choose weights with maximum value with total weight less than given wei
     }
 ```
 
-#### Practice problems with similar to Unbounded knapsack
+### Practice problems with similar to Unbounded knapsack
 1. [Rod Cutting Problems](https://practice.geeksforgeeks.org/problems/rod-cutting0840/1#)
 2. [Coin Change Problem: Max ways](https://www.geeksforgeeks.org/coin-change-dp-7/)
 3. [Coin Change Problem: Min coins](https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/)
@@ -190,14 +190,14 @@ NOTE: Solutions are for your reference and are available in the subsequent Folde
 
 # 3. Longest Common Subsequence
 
-##### Problem:
+### Problem:
 [Link](https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/)
 
 ```
 Find the longest common subsequence which is common in the given two strings x and y
 ```
 
-##### Input:
+### Input:
 
 ```
 x: string x of chars
@@ -217,7 +217,7 @@ O/P:
 
 ```
 
-##### Recursive Approach:
+### Recursive Approach:
 * Base Condition
     * Smallest valid input: When size of any 1 string is 0 then the lcs length will be zero.
 * Choice Diagram:
@@ -228,7 +228,7 @@ O/P:
 * Next Smaller Input: 
     * Once the choice on element is made we will make a choice so that we don't need to visit it again.
 
-##### Recusrsive Code:
+### Recusrsive Code:
 
 ```
     int longestCommonSubsequence(string x, string y, int m, int n) {
@@ -248,7 +248,7 @@ O/P:
     
 ```
 
-##### Recursion + Memoization:
+### Recursion + Memoization:
 ```
     int static dp[1001][1001];
     memset(dp, -1, sizeof(dp)); <- in main 
@@ -271,7 +271,7 @@ O/P:
     }
 ```
 
-##### Top down Code:
+### Top down Code:
 ```
     int longestCommonSubsequence(string x, string y, int m, int n) {
         int dp[m+1][n+1];
@@ -315,17 +315,17 @@ O/P:
     }
 ```
 
-#### Identification of LCS problems
+### Identification of LCS problems
 * dynamic programming (Choice Optimal)
 * 2 Strings are given
 * We have to find longest common something OR optimal
 
-#### Can be solved using lcs?
+### Can be solved using lcs?
 1. I/P: 2 Strings (also sometimes if 1 can be used to make another hidden string)
 2. Question: Longest
 3. O/P: length (int)
 
-#### Practice problems with similar to Longest Common Subsequence
+### Practice problems with similar to Longest Common Subsequence
 1. [Longest Common Substring](https://www.geeksforgeeks.org/longest-common-substring-dp-29/)
 2. [Print Longest Common Subsequence](https://www.geeksforgeeks.org/printing-longest-common-subsequence/)
 3. [Shortest Common SuperSequence](https://www.geeksforgeeks.org/shortest-common-supersequence/)
@@ -346,7 +346,7 @@ NOTE: Solutions are for your reference and are available in the subsequent Folde
 
 # 4. Matrix Chain Multiplication
 
-##### Problem:
+### Problem:
 [Link](https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/)
 
 
@@ -363,7 +363,7 @@ where cost of multipying matrix with dimenion m1,n1 and m2,n2 is given by arr[m1
 
 ```
 
-##### Recursive Approach:
+### Recursive Approach:
 1. Find i, j
 2. Find Base Condition
     * Think of first invalid Input: (i > j) return 0
@@ -372,7 +372,7 @@ where cost of multipying matrix with dimenion m1,n1 and m2,n2 is given by arr[m1
 5. and then we calcuate ans from tempAns of the each loop
 
 
-#### Recursive Code:
+### Recursive Code:
 ```
     int solve(int arr[], int i, int j) {
         if(i >= j) {
@@ -389,7 +389,7 @@ where cost of multipying matrix with dimenion m1,n1 and m2,n2 is given by arr[m1
     }
 ```
 
-##### Recursion + Memoization (Bottom Up):
+### Recursion + Memoization (Bottom Up):
 ```
 class Solution{
 public:
@@ -416,14 +416,14 @@ public:
 };
 ```
 
-##### Things to keep in mind while approaching MCM:
+### Things to keep in mind while approaching MCM:
 1. Find i, j
 2. Find Base Condition
     * Think of first invalid Input: (i > j) return 0
 3. Find K loop scheme
 4. calculate ans from tempAns
 
-##### Basic Format:
+### Basic Format:
 
 ```
     int solve(int arr[], int i, int j) {
@@ -441,19 +441,19 @@ public:
     }
 ```
 
-#### Identification of MCM problems
+### Identification of MCM problems
 * dynamic programming (Choice Optimal)
 * String or Array is given
 * We have to take i and j 
 * Loop k from i to j then call function on i = i and j = k and 2nd call on i = k+1 j = j
 * and then we calcuate ans from tempAns of the each loop
 
-#### Can be solved using MCM?
+### Can be solved using MCM?
 
-#### Practice problems with similar to Longest Common Subsequence
+### Practice problems with similar to Longest Common Subsequence
 1. [MCM]
 2. [Print MCM]
-3. [SEvaluate Expression to True]
+3. [Evaluate Expression to True]
 4. [Minimum / Maximum value of an Expression]
 5. [Palindromic partitioning]
 6. [Scramble String]

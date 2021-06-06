@@ -26,7 +26,7 @@ public:
         string y = x;
         reverse(y.begin(), y.end());
         int m = x.size(), n = m;
-	    return longestCommonSubsequence(x, y, m, n);
+        return longestCommonSubsequence(x, y, m, n);
 	} 
     int minimumNumberOfInsertions(string S) {
         return S.size() - lps(S);
