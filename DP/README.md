@@ -451,12 +451,12 @@ public:
 ### Can be solved using MCM?
 
 ### Practice problems with similar to Longest Common Subsequence
-1. [MCM]
+1. [MCM](https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/)
 2. [Print MCM]
-3. [Evaluate Expression to True]
+3. [Evaluate Expression to True](https://www.geeksforgeeks.org/boolean-parenthesization-problem-dp-37/)
 4. [Minimum / Maximum value of an Expression]
-5. [Palindromic partitioning]
-6. [Scramble String]
+5. [Palindromic partitioning](https://www.geeksforgeeks.org/palindrome-partitioning-dp-17/)
+6. [Scramble String](https://leetcode.com/problems/scramble-string/)
 7. [Egg Droping Problem]
 
 NOTE: Solutions are for your reference and are available in the subsequent Folder
