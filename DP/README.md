@@ -450,7 +450,7 @@ public:
 
 ### Can be solved using MCM?
 
-### Practice problems with similar to Longest Common Subsequence
+### Practice problems with similar to MCM
 1. [MCM](https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/)
 2. [Print MCM]
 3. [Evaluate Expression to True](https://www.geeksforgeeks.org/boolean-parenthesization-problem-dp-37/)
@@ -458,5 +458,55 @@ public:
 5. [Palindromic partitioning](https://www.geeksforgeeks.org/palindrome-partitioning-dp-17/)
 6. [Scramble String](https://leetcode.com/problems/scramble-string/)
 7. [Egg Droping Problem]
+
+NOTE: Solutions are for your reference and are available in the subsequent Folder
+
+# 5. DP on Trees
+
+### Problem:
+[Link](https://www.geeksforgeeks.org/dynamic-programming-trees-set-1/)
+
+
+### Recursive Approach:
+1. Base condition
+2. Hypothesis (call the funstion on left and right and will never question how it gave answer)
+3. Induction (using the ans from hypothesis)
+
+### Code / Basic Format:
+```
+    int solve(Node* root, int& res) {
+        // Base Condition
+        if(root == NULL) {
+            return res;
+        }
+        
+        // hypothesis
+        int l = solve(root->left, res);
+        int r = solve(root->right, res);
+
+        // induction
+        int tempAns = calculate(tempAns from l, r);
+        res = someOperationOn(tempAns, res);
+        
+        return temp;
+    }
+    int Problem(Node* root) {
+        int res = -1;
+        solve(root, res); // please give a note here we are return ret and not solve
+        return res;
+    }
+```
+
+### Identification of DP on Trees problems
+1. Tree is given
+2. Traversing a Tree O(n)
+3. for Each Node you are performing an operation worth O(n)
+
+
+### Practice problems with similar to DP on Trees
+1. [Diameter of a Binary Tree](https://www.geeksforgeeks.org/diameter-of-a-binary-tree-in-on-a-new-method/)
+2. [Diameter of a N-ary Tree]()
+3. [Maximum Path Sum from any Node to other Node](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+4. [Maximum Path Sum from any leaf Node to other leaf Node]() 
 
 NOTE: Solutions are for your reference and are available in the subsequent Folder
