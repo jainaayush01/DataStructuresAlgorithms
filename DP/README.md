@@ -507,6 +507,6 @@ NOTE: Solutions are for your reference and are available in the subsequent Folde
 1. [Diameter of a Binary Tree](https://www.geeksforgeeks.org/diameter-of-a-binary-tree-in-on-a-new-method/)
 2. [Diameter of a N-ary Tree]()
 3. [Maximum Path Sum from any Node to other Node](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
-4. [Maximum Path Sum from any leaf Node to other leaf Node]() 
+4. [Maximum Path Sum from any leaf Node to other leaf Node](https://www.geeksforgeeks.org/find-maximum-path-sum-two-leaves-binary-tree/) 
 
 NOTE: Solutions are for your reference and are available in the subsequent Folder
