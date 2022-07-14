@@ -19,3 +19,9 @@ Both condition must be there
 
 * top() => get topmost element (max for minHeap and min for maxHeap)
 * push and pop operation but performed only on topmost elements
+
+
+
+## Problems
+
+1. Kth Largest/Smallest Element [Problem](https://leetcode.com/problems/kth-largest-element-in-an-array/) [Solution](./k-largest-element)
